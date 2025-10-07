@@ -1,0 +1,201 @@
+body {
+  position: relative;
+  background-color: #1a0420;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ddfe6d6c-9f0f-4447-a495-b7c385c54cfd/dfd60g3-5c93400f-e663-4949-a048-946a899db365.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RkZmU2ZDZjLTlmMGYtNDQ0Ny1hNDk1LWI3YzM4NWM1NGNmZFwvZGZkNjBnMy01YzkzNDAwZi1lNjYzLTQ5NDktYTA0OC05NDZhODk5ZGIzNjUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.3LzHq06ubAtoYWxzlabjaNfI3Al0M5PxiIUnaHLF390"); /* одна широкая гифка */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.strip {
+  float: left;
+  width: 1300px;
+  /* height: 820px; */
+  margin: 20px auto 20px 40px;
+  background-color: #1a0420;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.strip .unique img {
+  height: 600px;
+  width: 450px;
+  border-radius: 20px;
+}
+
+.image-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.image-block {
+  align-items: center;
+  text-align: center;
+}
+
+.image-row img {
+  height: 400px;
+  width: 250px;
+  border-radius: 8px;
+}
+
+.strip h1,
+.strip h2,
+.strip h3,
+.strip h4 {
+  color: #ffffff;
+  margin: 10px 20px;
+  text-align: center;
+}
+
+.strip table {
+  border-collapse: separate;
+  border-spacing: 50px 35px;
+}
+
+.borderTable table {
+  border: 2px solid #a86eff;
+  border-collapse: collapse;
+}
+
+.borderTable table tr td {
+  border: 2px solid #a86eff;
+  text-align: center;
+}
+
+.left-strip {
+  float: right;
+  width: 20%;
+  height: 725px;
+  margin: 60px auto 20px auto;
+  background-color: #1a0420;
+  /* padding: 40px; */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.left-strip h1,
+.left-strip h2,
+.left-strip h3 {
+  vertical-align: middle;
+  line-height: 80px;
+  position: relative;
+  text-align: center;
+}
+
+li,
+h1,
+h2,
+h3 {
+  color: #ffffff;
+  text-align: center;
+}
+
+button {
+  background-color: #6a1b9a;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(160, 100, 255, 0.4);
+}
+
+button:hover {
+  background-color: #8e24aa;
+  box-shadow: 0 0 20px rgba(200, 150, 255, 0.6);
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 8px rgba(120, 80, 200, 0.5);
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #a86eff;
+  text-decoration: underline;
+}
+
+.text,
+select,
+textarea {
+  background-color: #2e0b45;
+  color: #ffffff;
+  border: 1px solid #a86eff;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(168, 110, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.text:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #d3aaff;
+  box-shadow: 0 0 14px rgba(211, 170, 255, 0.6);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+select option {
+  background-color: #2e0b45;
+  color: #ffffff;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.error {
+  background-color: #6d0303;
+  color: #ff0000;
+  border: 1px solid #960505;
+  animation: shake 0.4s;
+}

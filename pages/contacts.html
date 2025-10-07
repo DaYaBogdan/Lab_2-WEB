@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Main Page</title>
+    <meta charset="utf-8" />
+    <script src="../scripts/contacts.js"></script>
+    <link rel="stylesheet" href="Lab_1.css" />
+  </head>
+
+  <body>
+    <div class="strip">
+      <style>
+        .strip h1,
+        .strip h2,
+        .strip h3 {
+          margin: auto;
+          text-align: left;
+        }
+      </style>
+
+      <fieldset>
+        <legend><h1>Введите Контактные данные:</h1></legend>
+
+        <table>
+          <tr>
+            <td>
+              <label><h2>Введите ФИО:</h2></label>
+            </td>
+            <td colspan="2">
+              <label><h2>Выберите пол:</h2></label>
+            </td>
+            <td>
+              <label><h2>Выберите Возраст:</h2></label>
+            </td>
+            <td>
+              <label><h2>Ваш email:</h2></label>
+            </td>
+          </tr>
+          <tr>
+            <div>
+              <form action="mailto:bogsm228@gmail.com" method="post" enctype="text/plain" id="contactForm">
+                <tr>
+                  <td>
+                    <input class="text" type="text" id="FIO" name="FIO" value="" placeholder="Smirnov B.V." />
+                  </td>
+                  <td>
+                    <h2 style="display: flex">
+                      Male
+                      <input type="radio" id="male" name="sex" value="male" />
+                    </h2>
+                  </td>
+                  <td>
+                    <h2 style="display: flex">
+                      Female
+                      <input type="radio" id="female" name="sex" value="female" />
+                    </h2>
+                  </td>
+                  <td>
+                    <select name="age" id="age" style="width: 200px">
+                      <option value="18+">&gt; 18</option>
+                      <option value="22+">&gt; 22</option>
+                      <option value="26+">&gt; 26</option>
+                      <option value="30+">&gt; 30</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input class="text" type="text" id="email" name="email" value="" placeholder="foo@gmail.com" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label><h2>Ваш комментарий:</h2></label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input class="text" type="text" name="message" value="" placeholder="Ваш комментарий" />
+                  </td>
+                </tr>
+                <tr></tr>
+                <tr>
+                  <td>
+                    <button type="button" onclick="prepareForm()">Отправить</button>
+                  </td>
+                  <td>
+                    <button type="reset" value="Reset">Сбросить</button>
+                  </td>
+                </tr>
+              </form>
+            </div>
+          </tr>
+        </table>
+      </fieldset>
+    </div>
+
+    <div class="left-strip" id="pointers">
+      <a href="main_page.html"><h2>Главная страница</h2></a>
+      <a href="about.html"><h2>Обо мне</h2></a>
+      <a href="my_hobbies.html"><h2>Мои интересы</h2> </a>
+      <a href="lessons.html"><h2>Учёба</h2></a>
+      <a href="album.html"><h2>Фотоальбом</h2></a>
+      <a href="contacts.html"><h2>Контакт</h2></a>
+      <a href="test.html"><h2>Тест по дисциплине</h2></a>
+    </div>
+  </body>
+</html>
