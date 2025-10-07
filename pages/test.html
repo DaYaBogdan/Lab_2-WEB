@@ -2,8 +2,9 @@
 
 <html>
   <head>
-    <title>Main Page</title>
+    <title>test</title>
     <meta charset="utf-8" />
+    <script src="../scripts/test.js"></script>
     <link rel="stylesheet" href="Lab_1.css" />
   </head>
 
@@ -18,11 +19,7 @@
     </style>
 
     <div class="strip">
-      <form
-        action="mailto:bogsm228@gmail.com"
-        method="post"
-        enctype="text/plain"
-      >
+      <form action="mailto:bogsm228@gmail.com" method="post" enctype="text/plain" id="testForm">
         <table>
           <tr>
             <td>
@@ -59,15 +56,8 @@
           <table>
             <tr>
               <td colspan="4">
-                <h3>
-                  1. Какой тип данных чаще всего используется для хранения целых
-                  чисел в языках программирования?
-                </h3>
-                <select
-                  name="question1"
-                  id="question1"
-                  style="resize: none; width: 200px; height: 45px"
-                >
+                <h3>1. Какой тип данных чаще всего используется для хранения целых чисел в языках программирования?</h3>
+                <select name="question1" id="question1" style="resize: none; width: 200px; height: 45px">
                   <option value="float">float</option>
                   <option value="int">int</option>
                   <option value="string">string</option>
@@ -78,23 +68,14 @@
 
             <tr>
               <td colspan="4">
-                <h3>
-                  2. Что такое переменная в контексте программирования и какова
-                  её роль в алгоритмах?
-                </h3>
-                <textarea
-                  placeholder="Переменная -"
-                  style="resize: none; width: 600px; height: 100px"
-                  required
-                ></textarea>
+                <h3>2. Что такое переменная в контексте программирования и какова её роль в алгоритмах?</h3>
+                <textarea placeholder="Переменная -" style="resize: none; width: 600px; height: 100px" id="secondAnswer" required></textarea>
               </td>
             </tr>
 
             <tr>
               <td colspan="4">
-                <h3>
-                  3. Какой элемент является обязательным в структуре алгоритма?
-                </h3>
+                <h3>3. Какой элемент является обязательным в структуре алгоритма?</h3>
               </td>
             </tr>
 
@@ -102,12 +83,7 @@
               <td>
                 <h3 style="display: flex">
                   Цикл
-                  <input
-                    type="radio"
-                    name="question3"
-                    id="question3"
-                    value="Цикл"
-                  />
+                  <input type="radio" name="question3" id="question3" value="Цикл" />
                 </h3>
               </td>
             </tr>
@@ -116,12 +92,7 @@
               <td>
                 <h3 style="display: flex">
                   Графический интерфейс
-                  <input
-                    type="radio"
-                    name="question3"
-                    id="question3"
-                    value="Графический интерфейс"
-                  />
+                  <input type="radio" name="question3" id="question3" value="Графический интерфейс" />
                 </h3>
               </td>
             </tr>
@@ -130,12 +101,7 @@
               <td>
                 <h3 style="display: flex">
                   Начало и конец
-                  <input
-                    type="radio"
-                    name="question3"
-                    id="question3"
-                    value="Начало и конец"
-                  />
+                  <input type="radio" name="question3" id="question3" value="Начало и конец" />
                 </h3>
               </td>
             </tr>
@@ -144,7 +110,7 @@
 
             <tr>
               <td>
-                <button type="submit" name="submit">Отправить</button>
+                <button type="button" onclick="prepareForm()" name="submit">Отправить</button>
               </td>
               <td>
                 <button type="reset" name="reset">Отчистить форму</button>

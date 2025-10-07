@@ -19,7 +19,7 @@ function errorElement(element) {
 }
 
 function prepareForm() {
-  var errorFlag;
+  var errorFlag = 0;
   const FIO = document.getElementById("FIO");
   const email = document.getElementById("email");
   const phone = document.getElementById("phone");
@@ -32,12 +32,12 @@ function prepareForm() {
     errorElement(email);
     errorFlag = 1;
   }
-  if (!check(phone.textContext, numberPattern)) {
+  if (!check(phone.value, numberPattern)) {
     errorElement(phone);
     errorFlag = 1;
   }
 
   if (!errorFlag) {
-    document.getElementById("contactForm").submit();
+    document.getElementById("contactForm").requestSubmit();
   }
 }
