@@ -22,7 +22,7 @@ function prepareForm() {
   var errorFlag;
   const FIO = document.getElementById("FIO");
   const email = document.getElementById("email");
-  //   const phone = document.getElementById("phone");
+  const phone = document.getElementById("phone");
 
   if (!check(FIO.value, FIOPattern)) {
     errorElement(FIO);
@@ -32,12 +32,12 @@ function prepareForm() {
     errorElement(email);
     errorFlag = 1;
   }
-  //   if (check(phone.textContext, numberPattern)) {
-  //     errorElement(phone);
-  //     errorFlag = 1;
-  //   }
+  if (!check(phone.textContext, numberPattern)) {
+    errorElement(phone);
+    errorFlag = 1;
+  }
+
   if (!errorFlag) {
     document.getElementById("contactForm").submit();
-    console.log("submited");
   }
 }
